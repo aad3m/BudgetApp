@@ -1,8 +1,13 @@
+package BudgetApp;
+
 import java.util.Scanner;
 
 public class BudgetApp {
     private final Scanner scanner = new Scanner(System.in);
     private double balance;
+
+    public BudgetApp(double balance) {
+    }
 
     public void start() {
         boolean isRunning = true;
@@ -62,5 +67,9 @@ public class BudgetApp {
             balance -= expense;
             System.out.println("Expense added successfully!");
         }
+    }
+
+    public double getBalance() {
+        return balance;
     }
 }
